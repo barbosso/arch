@@ -57,7 +57,8 @@ echo 'Ставим иксы и драйвера'
 # pacman -S wayland sway foot waybar wofi qt5-wayland glfw-wayland gdm git
 # systemctl enable gdm
 
-sudo pacman -S xorg-server xorg-xinit i3-gaps rofi polybar picom feh terminator networkmanager network-manager-applet
+sudo pacman -S xorg-server xorg-xinit i3-gaps rofi polybar picom feh terminator networkmanager network-manager-applet git
+curl https://raw.githubusercontent.com/barbosso/arch/main/archuefi3.sh -o /home/$username/archuefi3.sh
 
 echo 'Установка завершена! Перезагрузите систему.'
 exit

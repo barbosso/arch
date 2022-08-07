@@ -36,7 +36,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S nano zsh terminus-font wget
 
 echo 'Добавляем пользователя'
-useradd -m -g users -G wheel -s /bin/zsh $username
+useradd -m -g users -G wheel -d /home/$username -s /bin/zsh $username
 
 echo 'Создаем root пароль'
 passwd
@@ -57,7 +57,7 @@ echo 'Ставим иксы и драйвера'
 # pacman -S wayland sway foot waybar wofi qt5-wayland glfw-wayland gdm git
 # systemctl enable gdm
 
-sudo pacman -S xorg-server xorg-xinit i3-gaps rofi polybar picom feh terminator networkmanager network-manager-applet git
+sudo pacman -S xorg-server xorg-xinit i3-gaps rofi polybar picom feh terminator networkmanager network-manager-applet git awesome-terminal-fonts otf-font-awesome ttf-font-awesome
 curl https://raw.githubusercontent.com/barbosso/arch/main/archuefi3.sh -o /home/$username/archuefi3.sh
 
 echo 'Установка завершена! Перезагрузите систему.'
